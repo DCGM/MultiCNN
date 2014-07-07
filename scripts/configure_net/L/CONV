@@ -1,0 +1,28 @@
+layers {
+  name:
+  type: CONVOLUTION
+  bottom:
+  top:
+
+  blobs_lr: 1
+  blobs_lr: 2
+  weight_decay: 1
+  weight_decay: 0
+  convolution_param {
+
+    kernel_size:
+    num_output: 
+    stride:
+    pad:
+    group:
+
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}

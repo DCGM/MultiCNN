@@ -1,0 +1,12 @@
+layers {
+  name:
+  type: LRN
+  bottom:
+  top:
+
+  lrn_param {
+    local_size:
+    alpha: 0.0001
+    beta: 0.75
+  }
+}

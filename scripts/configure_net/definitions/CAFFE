@@ -1,0 +1,24 @@
+# this should create a net equivalent to the exemplar caffe net for imagenet
+CONV kernel_size 11 num_output 96 stride 4 pad 0 group 1
+RELU
+POOL
+LRN local_size 5
+CONV kernel_size 5 num_output 256 stride 1 pad 2 group 2
+RELU
+POOL
+LRN local_size 5
+CONV kernel_size 3 num_output 384 stride 1 pad 1 group 1
+RELU
+CONV kernel_size 3 num_output 384 stride 1 pad 1 group 2
+RELU
+CONV kernel_size 3 num_output 256 stride 1 pad 1 group 2
+RELU
+POOL
+DROP
+PROD num_output 4096
+RELU
+DROP
+PROD num_output 4096
+RELU
+DROP
+PROD num_output 1000

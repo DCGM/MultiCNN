@@ -1,0 +1,14 @@
+name: "generic"
+layers {
+  name: "data"
+  type: DATA
+  data_param {
+    source: "train_db"
+    mean_file: "./mean.binaryproto"
+    batch_size: 256
+    crop_size: 227
+    mirror: true
+  }
+  top: "data"
+  top: "label"
+}
