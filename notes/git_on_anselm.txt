@@ -1,0 +1,3 @@
+do:
+1) uset SSH_AKSPASS
+2) specify user name when clone, eg.: git clone https://michal-hradis@github.com/DCGM/MultiCNN.git
