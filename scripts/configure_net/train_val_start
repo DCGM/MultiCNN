@@ -1,0 +1,36 @@
+name: "VDCN_01"
+
+layers {
+  name: "data"
+  type: DATA
+  top: "data"
+  top: "label"
+data_param {
+    source: "CALTECH256_train_leveldb"
+    batch_size: 2
+  }
+  transform_param {
+    crop_size: 224
+    mean_file: "CALTECH256_mean.bin"
+    mirror: true
+  }
+  include: { phase: TRAIN }
+}
+
+layers {
+  name: "data"
+  type: DATA
+  top: "data"
+  top: "label"
+  data_param {
+    source: "CALTECH256_val_leveldb"
+    batch_size: 2
+  }
+  transform_param {
+    mean_file: "CALTECH256_mean.bin"
+    crop_size: 224
+    mirror: false
+  }
+  include: { phase: TEST }
+}
+  
