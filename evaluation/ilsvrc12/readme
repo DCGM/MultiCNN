@@ -1,0 +1,4 @@
+Eval scripts for cnn trained with ILSVRC2012
+- eval.py - evaluation for python processing
+- evasl_bin.py evaluation for bin processing (extract_features)
+
