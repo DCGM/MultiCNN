@@ -28,6 +28,7 @@ do
 	esac
     done
 
+    #these are not in-place
     if [[ 'CONV PROD' == *$TYPE* ]]
     then
 	ID=$(( $ID + 1 ))

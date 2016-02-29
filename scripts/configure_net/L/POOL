@@ -1,12 +1,11 @@
-layers {
-  name:
-  type: POOLING
-  bottom:
-  top:
-
+layer {
+  name: "__TOP__"
+  type: "Pooling"
+  bottom: "__IN__"
+  top: "__TOP__"
   pooling_param {
-    pool: MAX
-    kernel_size: 3
-    stride: 2
+    pool: __OPERATION:MAX__
+    kernel_size: __K_SIZE:3__ # pool over a 3x3 region
+    stride: __STRIDE:2__      # step two pixels (in the bottom blob) between pooling regions
   }
 }

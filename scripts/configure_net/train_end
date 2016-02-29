@@ -1,6 +1,0 @@
-layers {
-  name: "loss"
-  type: SOFTMAX_LOSS
-  bottom:
-  bottom: "label"
-}

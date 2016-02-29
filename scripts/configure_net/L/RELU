@@ -1,6 +1,6 @@
-layers {
-  name:
-  type: RELU
-  bottom:
-  top:
+layer {
+  name: "__TOP__-relu"
+  type: "ReLU"
+  bottom: "__TOP__"
+  top: "__TOP__"
 }
