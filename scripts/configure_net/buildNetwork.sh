@@ -25,7 +25,7 @@ do
     esac
   done
 
-  TEXT=$(echo "$TEXT" | sed "s/__.*://" | sed "s/__//")
+  TEXT=$(echo "$TEXT" | sed "s/__.*://" | sed "s/__.*__//" | sed "s/__//")
 
   echo "$TEXT"
 done
