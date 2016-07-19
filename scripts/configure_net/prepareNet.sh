@@ -3,14 +3,15 @@ ID=0
 
 while read line
 do
+    # skip lines starting with #
     if [ "#" == "${line:0:1}" ]
     then
 	continue
     fi
 
+    # process the layer file
     STATE=1
     TEXT=''
-
     for word in $line
     do
 	case $STATE in
@@ -28,12 +29,11 @@ do
 	esac
     done
 
-    #these are not in-place
+    #these layers are not in-place
     if [[ 'CONV PROD' == *$TYPE* ]]
     then
 	ID=$(( $ID + 1 ))
     fi
-
 
 
     if [[ 'DROP RELU' == *$TYPE* ]]
